@@ -80,6 +80,9 @@ const I18N = {
     'ftr.contact': 'Contacto',
     'ftr.social': 'Redes sociais',
     'ftr.rights': '©2026 Ponto por Ponto · Todos os direitos reservados',
+
+    'gal.back': '← Coleções',
+    'gal.empty': 'Em breve.',
   },
 
   en: {
@@ -157,6 +160,9 @@ const I18N = {
     'ftr.contact': 'Contact',
     'ftr.social': 'Social',
     'ftr.rights': '©2026 Ponto por Ponto · All rights reserved',
+
+    'gal.back': '← Collections',
+    'gal.empty': 'Coming soon.',
   },
 
   es: {
@@ -234,6 +240,9 @@ const I18N = {
     'ftr.contact': 'Contacto',
     'ftr.social': 'Redes',
     'ftr.rights': '©2026 Ponto por Ponto · Todos los derechos reservados',
+
+    'gal.back': '← Colecciones',
+    'gal.empty': 'Próximamente.',
   },
 
   it: {
@@ -311,6 +320,9 @@ const I18N = {
     'ftr.contact': 'Contatti',
     'ftr.social': 'Social',
     'ftr.rights': '©2026 Ponto por Ponto · Tutti i diritti riservati',
+
+    'gal.back': '← Collezioni',
+    'gal.empty': 'Prossimamente.',
   },
 };
 
@@ -420,5 +432,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const y = Math.min(window.scrollY, 600);
       heroMedia.style.transform = `translateY(${y * 0.15}px)`;
     }, { passive: true });
+  }
+
+  // gallery lightbox
+  const lightbox = document.querySelector('.lightbox');
+  if (lightbox) {
+    const lbImg = lightbox.querySelector('.lightbox-img');
+    const lbClose = lightbox.querySelector('.lightbox-close');
+    const lbPrev = lightbox.querySelector('.lightbox-prev');
+    const lbNext = lightbox.querySelector('.lightbox-next');
+    const items = [...document.querySelectorAll('.gallery-item img')];
+    let current = 0;
+
+    function openLightbox(idx) {
+      current = (idx + items.length) % items.length;
+      lbImg.src = items[current].src;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    items.forEach((img, i) => img.closest('.gallery-item').addEventListener('click', () => openLightbox(i)));
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', () => openLightbox(current - 1));
+    lbNext.addEventListener('click', () => openLightbox(current + 1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') openLightbox(current - 1);
+      if (e.key === 'ArrowRight') openLightbox(current + 1);
+    });
   }
 });
