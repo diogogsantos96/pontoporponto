@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <title>Acessórios · Ponto por Ponto</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Coleção Acessórios — Toucas, fitas, sapatos, mantas, os pequenos detalhes. Feitos à mão em Portugal." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    window.TWEAK_DEFAULTS = { "palette": "heirloom" };
+  </script>
+  <script src="tweaks.js"></script>
+</head>
+<body>
+
+  <!-- ============== NAV ============== -->
+  <header class="nav">
+    <a href="index.html" class="nav-brand" aria-label="Ponto por Ponto">
+      <img src="assets/logo.png" alt="" class="nav-logo" />
+      <span class="nav-wordmark">Ponto por Ponto</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <button class="lang-btn" aria-haspopup="menu" aria-label="Language">
+          <span class="flag flag-pt"></span>
+          <span class="lang-code">PT</span>
+          <span class="chev">▾</span>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+      <button class="nav-burger" aria-expanded="false" aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
+    <a href="index.html#processo" data-i18n="nav.process">Processo</a>
+    <a href="index.html#colecoes" data-i18n="nav.collections">Coleções</a>
+    <a href="index.html#onde" data-i18n="nav.stockists">Onde estamos</a>
+    <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+
+  <main>
+
+    <!-- ============== GALLERY HERO ============== -->
+    <section class="gallery-hero">
+      <img class="gallery-hero-bg" src="assets/img-col-acc.png" alt="" />
+      <a href="index.html#colecoes" class="gallery-hero-back" data-i18n="gal.back">← Coleções</a>
+      <div class="gallery-hero-content">
+        <div class="gallery-hero-eyebrow" data-i18n="col.acc.kicker">03 · Acessórios</div>
+        <h1 data-i18n="col.acc.title">Acessórios</h1>
+        <p class="gallery-hero-sub" data-i18n="col.acc.sub">Toucas, fitas, sapatos, mantas, os pequenos detalhes.</p>
+      </div>
+    </section>
+
+    <!-- ============== GALLERY GRID ============== -->
+    <section class="gallery-section">
+      <div class="gallery-grid">
+
+        <!-- Add images below — one block per photo.
+             Drop the image file into assets/gallery/accessories/ and add:
+
+        <div class="gallery-item">
+          <img src="assets/gallery/accessories/your-photo.jpg" alt="" loading="lazy" />
+        </div>
+
+        -->
+
+        <p class="gallery-empty" data-i18n="gal.empty">Em breve.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="" class="footer-logo" />
+          <span class="footer-wordmark">Ponto por Ponto</span>
+        </div>
+        <div class="tag" style="color:rgba(255,255,255,0.55);" data-i18n="ftr.tag">
+          Feito à mão em Portugal
+        </div>
+      </div>
+      <div class="col">
+        <h4 data-i18n="ftr.nav">Navegar</h4>
+        <ul>
+          <li><a href="index.html#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="index.html#processo" data-i18n="nav.process">Processo</a></li>
+          <li><a href="index.html#colecoes" data-i18n="nav.collections">Coleções</a></li>
+          <li><a href="index.html#onde" data-i18n="nav.stockists">Onde estamos</a></li>
+          <li><a href="index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 data-i18n="ftr.contact">Contacto</h4>
+        <ul>
+          <li><a href="mailto:geral@pontoporponto.pt">geral@pontoporponto.pt</a></li>
+          <li><a href="tel:+351222084002">+351 22 208 4002</a></li>
+          <li style="opacity:0.65;">Rua João das Regras 95<br/>4000-292 Porto</li>
+        </ul>
+        <h4 style="margin-top:24px;" data-i18n="ftr.social">Redes sociais</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/pontoporpontolda/" target="_blank" rel="noopener">Instagram ↗</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100057819002951" target="_blank" rel="noopener">Facebook ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span data-i18n="ftr.rights">©2026 Ponto por Ponto · Todos os direitos reservados</span>
+      <div class="footer-flags">
+        <span class="flag flag-pt"></span>
+        <span class="flag flag-en"></span>
+        <span class="flag flag-es"></span>
+        <span class="flag flag-it"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== LIGHTBOX ============== -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox-close" aria-label="Fechar">×</button>
+    <button class="lightbox-prev" aria-label="Anterior">&#8249;</button>
+    <img class="lightbox-img" src="" alt="" />
+    <button class="lightbox-next" aria-label="Seguinte">&#8250;</button>
+  </div>
+
+  <script src="site.js"></script>
+</body>
+</html>
